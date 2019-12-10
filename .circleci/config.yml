@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Build with Maven
+          command: mvn package
+      - run:
           name: Analyze on SonarCloud
           command: mvn verify sonar:sonar
 
